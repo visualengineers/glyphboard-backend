@@ -1,0 +1,12 @@
+Flask
+flask_jsonpify
+flask_cors
+SQLAlchemy
+pandas
+pyyaml
+scikit-learn
+scipy
+numpy
+statistics
+sklearn
+pathlib

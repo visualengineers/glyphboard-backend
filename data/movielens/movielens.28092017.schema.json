@@ -1,0 +1,59 @@
+{
+    "label": {
+        "1": "movie id",
+        "2": "movie title",
+        "3": "movie release",
+        "4": "imdb url",
+        "5": "Action",
+        "6": "Adventure",
+        "7": "Animation",
+        "8": "Children",
+        "9": "Comedy",
+        "10": "Crime",
+        "11": "Documentary",
+        "12": "Drama",
+        "13": "Fantasy",
+        "14": "Film-Noir",
+        "15": "Horror",
+        "16": "Musical",
+        "17": "Mystery",
+        "18": "Romance",
+        "19": "SciFi",
+        "20": "Thriller",
+        "21": "War",
+        "22": "Western"
+    },
+    "glyph": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+    ],
+    "variant-context": {
+        "1": {
+            "id": "1",
+            "description": "standard context"
+        }
+    },
+    "color": "5",
+    "tooltip": [
+        "1",
+        "2",
+        "3",
+        "4"
+    ]
+}

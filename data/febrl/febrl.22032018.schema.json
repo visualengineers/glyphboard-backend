@@ -1,0 +1,174 @@
+{
+    "label": {
+        "1": "given_name",
+        "2": "surname",
+        "3": "street_number",
+        "4": "address_1",
+        "5": "address_2",
+        "6": "suburb",
+        "7": "postcode",
+        "8": "state",
+        "9": "date_of_birth",
+        "10": "age",
+        "11": "phone_number",
+        "12": "soc_sec_id",
+        "13": "blocking_number",
+        "14": "distance to cluster representative",
+        "15": "cluster_id"
+    },
+    "glyph": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+    ],
+    "variant-context": {
+        "1": {
+            "id": "1",
+            "description": "distance of features to representative of cluster 1"
+        },
+        "2": {
+            "id": "2",
+            "description": "distance of features to representative of cluster 2"
+        },
+        "3": {
+            "id": "3",
+            "description": "distance of features to representative of cluster 3"
+        },
+        "4": {
+            "id": "4",
+            "description": "distance of features to representative of cluster 4"
+        },
+        "5": {
+            "id": "5",
+            "description": "distance of features to representative of cluster 5"
+        },
+        "6": {
+            "id": "6",
+            "description": "distance of features to representative of cluster 6"
+        },
+        "7": {
+            "id": "7",
+            "description": "distance of features to representative of cluster 7"
+        },
+        "8": {
+            "id": "8",
+            "description": "distance of features to representative of cluster 8"
+        },
+        "9": {
+            "id": "9",
+            "description": "distance of features to representative of cluster 9"
+        },
+        "10": {
+            "id": "10",
+            "description": "distance of features to representative of cluster 10"
+        },
+        "11": {
+            "id": "11",
+            "description": "distance of features to representative of cluster 11"
+        },
+        "12": {
+            "id": "12",
+            "description": "distance of features to representative of cluster 12"
+        },
+        "13": {
+            "id": "13",
+            "description": "distance of features to representative of cluster 13"
+        },
+        "14": {
+            "id": "14",
+            "description": "distance of features to representative of cluster 14"
+        },
+        "15": {
+            "id": "15",
+            "description": "distance of features to representative of cluster 15"
+        },
+        "16": {
+            "id": "16",
+            "description": "distance of features to representative of cluster 16"
+        },
+        "17": {
+            "id": "17",
+            "description": "distance of features to representative of cluster 17"
+        },
+        "18": {
+            "id": "18",
+            "description": "distance of features to representative of cluster 18"
+        },
+        "19": {
+            "id": "19",
+            "description": "distance of features to representative of cluster 19"
+        },
+        "20": {
+            "id": "20",
+            "description": "distance of features to representative of cluster 20"
+        },
+        "21": {
+            "id": "21",
+            "description": "distance of features to representative of cluster 21"
+        },
+        "22": {
+            "id": "22",
+            "description": "distance of features to representative of cluster 22"
+        },
+        "23": {
+            "id": "23",
+            "description": "distance of features to representative of cluster 23"
+        },
+        "24": {
+            "id": "24",
+            "description": "distance of features to representative of cluster 24"
+        },
+        "25": {
+            "id": "25",
+            "description": "distance of features to representative of cluster 25"
+        },
+        "26": {
+            "id": "26",
+            "description": "distance of features to representative of cluster 26"
+        },
+        "27": {
+            "id": "27",
+            "description": "distance of features to representative of cluster 27"
+        },
+        "28": {
+            "id": "28",
+            "description": "distance of features to representative of cluster 28"
+        },
+        "29": {
+            "id": "29",
+            "description": "distance of features to representative of cluster 29"
+        },
+        "30": {
+            "id": "30",
+            "description": "distance of features to representative of cluster 30"
+        },
+        "31": {
+            "id": "31",
+            "description": "std of features over the 30 contexts"
+        }
+    },
+    "color": "11",
+    "tooltip": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+    ]
+}

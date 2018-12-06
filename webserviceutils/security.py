@@ -1,0 +1,31 @@
+from functools import wraps
+from flask import request
+
+ALLOWED_EXTENSIONS = set(['zip', 'csv'])
+
+def init(allowed_ips):
+    global API_ALLOWED_IPS
+    API_ALLOWED_IPS = allowed_ips
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def getrequestip(req):
+    if req.headers.getlist("X-Forwarded-For"):
+        requestip = req.headers.getlist("X-Forwarded-For")[0]
+    else:
+        requestip = req.remote_addr
+    return requestip
+
+def ipcheck(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        if API_ALLOWED_IPS is None:
+            return f(*args, **kwargs)
+        ip = getrequestip(request)
+        for IP in API_ALLOWED_IPS:
+            if str(ip).startswith(ip) or str(ip) == IP:
+                return f(*args, **kwargs)
+        return 'Your IP Is Not allowed ' + ip
+    return wrapped
