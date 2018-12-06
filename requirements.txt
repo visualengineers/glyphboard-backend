@@ -3,7 +3,7 @@ click==6.7
 colorama==0.3.9
 docutils==0.14
 first==2.0.1
-Flask==0.12.2
+Flask==0.12.3
 Flask-Cors==3.0.3
 Flask-Jsonpify==1.5.0
 isort==4.3.4
