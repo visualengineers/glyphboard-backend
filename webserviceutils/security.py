@@ -23,9 +23,9 @@ def ipcheck(f):
     def wrapped(*args, **kwargs):
         if API_ALLOWED_IPS is None:
             return f(*args, **kwargs)
-        ip = getrequestip(request)
+        req_ip = getrequestip(request)
         for IP in API_ALLOWED_IPS:
-            if str(ip).startswith(ip) or str(ip) == IP:
+            if str(req_ip).startswith(IP) or str(req_ip) == IP:
                 return f(*args, **kwargs)
-        return 'Your IP Is Not allowed ' + ip
+        return 'Your IP Is Not allowed ' + req_ip
     return wrapped

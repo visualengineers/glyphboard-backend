@@ -66,7 +66,6 @@ def exceptions(e):
 # APP ROUTES
 
 @app.route('/datasets', methods=['GET'])
-@security.ipcheck
 def get_datasets():
     # regexp for the files in the directory, gives back the matches 'feature', 'position.algorithm', 'schema': ^[\w]+\.(?P<timestamp>[\d]{2}\.[\d]{2}\.[\d]{4})\.(?P<type>feature|position|schema){1}\.?(?P<algorithm>[\D]+)?\.json{1}$
     # included_extensions = ['json']
@@ -99,7 +98,6 @@ def get_datasets():
 
 @app.route('/datasets/<string:dataset_name>/<string:timestamp>/<string:filetype>', defaults={'algorithm': ""}, methods=['GET'])
 @app.route('/datasets/<string:dataset_name>/<string:timestamp>/<string:filetype>/<string:algorithm>', methods=['GET'])
-@security.ipcheck
 def get_dataset(dataset_name, timestamp, filetype, algorithm):
     if algorithm == "":
         joinlist = (dataset_name, timestamp, filetype, "json")
