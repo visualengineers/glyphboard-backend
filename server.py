@@ -88,10 +88,9 @@ def get_datasets():
                         reformattedRegex[value['timestamp']][value['type']].append(value['algorithm'])
                 else:
                     reformattedRegex[value['timestamp']][value['type']] = [value['algorithm']]
-                # reformattedRegex[value['timestamp']][value['type']] = value['algorithm']
             else:
                 reformattedRegex[value['timestamp']] = {}
-                reformattedRegex[value['timestamp']][value['type']] = value['algorithm']
+                reformattedRegex[value['timestamp']][value['type']] = [value['algorithm']]
         results.append({"Dataset":directory, "Items":[{"Time":k, "Algorithms":v} for k,v in reformattedRegex.items()]})
 
     return jsonify(results)
