@@ -83,8 +83,9 @@ def importCsv(filepath, extractpath):
         
     # prepare feature normalized dataframe and transform cateogrical data to ordinal data
     df_feature = df_value.copy()
+	df_feature = df_feature.drop(['x', 'y'], axis=1)
     df_subset = df_feature.select_dtypes(exclude=[np.number])
-    header = list(df_feature.iloc[:, 0:-2])
+    header = list(df_feature.iloc[:, :])
 
     for i in range(0, df_subset.shape[1]):
         label_encoder = LabelEncoder()
