@@ -74,6 +74,8 @@ def get_datasets():
     regex = re.compile("^[\w]+\.(?P<timestamp>[\w]+)\.(?P<type>feature|position|schema|meta){1}\.?(?P<algorithm>[\w-]+)?\.json{1}$")
     results = []
     for directory in directories:
+        if directory == ".DS_Store":
+            continue
         regexmatches = {}
         reformattedRegex = {}
         files = [fn for fn in os.listdir(os.path.join(relevant_path, directory))]

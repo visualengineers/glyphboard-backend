@@ -72,7 +72,7 @@ def importCsv(filepath, extractpath):
     # create positional json
     positionJsonString = '['
     for i in range(0, df_value.shape[0]):
-        positionData = {"id": i,"position":{"x": str(df_value['x'][i]), "y": str(df_value['y'][i])}}
+        positionData = {"id": i,"position":{"x": str(df_value['x'][i]).replace(',','.'), "y": str(df_value['y'][i]).replace(',','.')}}
         positionJsonString += json.dumps(positionData, indent=4, sort_keys=True, skipkeys=True, separators=(',', ': '), ensure_ascii=False)
         if (i < df_value.shape[0]-1):
             positionJsonString = positionJsonString + ", "
