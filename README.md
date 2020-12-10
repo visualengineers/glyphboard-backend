@@ -41,6 +41,35 @@ $ python server.py
 
 The server will be at port 4201.
 
+## Data Import via CSV
+
+Using a POST request to the base URL of the backend '/' CSV files can be uploaded and automatically converted to the necessary JSON files (see below). CSV files must adhere to a specific naming scheme and layout.
+
+### File Naming
+
+Uploaded CSV files must use the following naming convention:
+
+`<datasetname>.<positionalgorithm>.<version>`
+
+Where `<datasetname>` is replaced with the name of the dataset, later used to select this data set. `<positionalalgorithm>` will be used to name the position file created for this data set and should reflect the algorithm used to provide the positional data in the CSV file. `<version>` is an arbitrary string describing the version of the data (do not use dots, hyphens, etc.). Note that multiple uploads will result in copies of the data set and not update the versions within a previously uploaded file!
+
+Example: `myglyphboarddata.pca.20201210.csv`
+
+### CSV Layout
+
+CSV files use a header to describe the contained data. Use one line for each data point, where the first column must be named `id` and contain the numerical ID of the data point. The following columns can contain an arbitrary number of dimensions / features of the data point. The last two columns must be named `x` and `y` respectively and contain numerical coordinates for the two-dimensional plot in Glyphboard.
+
+Example:
+
+| id  | text                  | ...   | x      | y       |
+|-----|-----------------------|-------|--------|---------|
+| 1   | Lorem ipsum           |       | 231.2  | 12.1    |
+| 2   | Text of a data point  |       | 72.1   | 102.2   |
+| 3   | Another text data     |       | -45.9  | 200.75  |
+| .   | .                     |       | .      | .       |
+| .   | .                     |       | .      | .       |
+| .   | .                     |       | .      | .       |
+
 ## Definition of JSON API
 
 The API relies on several files with a defined naming schema:
