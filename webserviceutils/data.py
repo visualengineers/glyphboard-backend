@@ -23,6 +23,13 @@ class NumpyEncoder(json.JSONEncoder):
             return obj.tolist()
         return json.JSONEncoder.default(self, obj)
 
+def clean_dataset(df):
+    assert isinstance(df, pd.DataFrame), "df needs to be a pd.DataFrame"
+    df.replace([np.inf, -np.inf], np.nan, inplace=True)
+    df.fillna(0, inplace=True) # TODO: create your own function to impute missing values
+    indices_to_keep = ~df.isin([np.nan, np.inf, -np.inf]).any(1)
+    return df[indices_to_keep].astype(np.float64)
+
 def importZip(filepath, extractpath):
     # unzip file from upload
     zip_ref = zipfile.ZipFile(filepath, 'r')
@@ -93,6 +100,7 @@ def importCsv(filepath, extractpath):
         df_feature[df_subset.columns[i]] = integer_encoded
 
     min_max_scaler = MinMaxScaler()
+    clean_dataset(df_feature)
     df_feature[df_feature.columns] = min_max_scaler.fit_transform(df_feature[df_feature.columns])
 
     # create feature and value json
