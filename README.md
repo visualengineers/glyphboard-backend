@@ -41,19 +41,6 @@ $ python server.py
 
 The server will be at port 4201.
 
-## Deployment via Docker
-
-```
-$ cd ~
-$ git clone https://github.com/visualengineers/glyphboard
-$ cd glyphboard
-$ ng build --prod
-$ cd ..
-$ git clone https://github.com/visualengineers/glyphboard-backend.git
-$ cd glyphboard-backend
-$ docker-compose up --build
-```
-
 ## Data Import via CSV
 
 Using a POST request to the base URL of the backend '/' CSV files can be uploaded and automatically converted to the necessary JSON files (see below). CSV files must adhere to a specific naming scheme and layout.
