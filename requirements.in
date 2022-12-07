@@ -1,6 +1,7 @@
 Flask
 flask_jsonpify
 flask_cors
+Werkzeug
 SQLAlchemy
 pandas
 pyyaml
@@ -10,3 +11,4 @@ numpy
 statistics
 sklearn
 pathlib
+waitress

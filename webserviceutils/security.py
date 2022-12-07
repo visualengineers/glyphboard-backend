@@ -2,9 +2,9 @@ from functools import wraps
 from flask import request
 
 ALLOWED_EXTENSIONS = set(['zip', 'csv'])
+API_ALLOWED_IPS = 0
 
 def init(allowed_ips):
-    global API_ALLOWED_IPS
     API_ALLOWED_IPS = allowed_ips
 
 def allowed_file(filename):

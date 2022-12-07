@@ -144,7 +144,7 @@ def upload_file():
 
 # MODULE INIT
 
-if __name__ == '__main__':
+if __name__ == '__main__' or __name__ == 'server':
     # init logger with Flask App and the logging directory, get its own config?
     handler = RotatingFileHandler(os.path.join(script_dir, "app.log"), maxBytes=100000, backupCount=0)
     LOGGER = logging.getLogger(__name__)
