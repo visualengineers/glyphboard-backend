@@ -1,6 +1,6 @@
-FROM python:3.7-slim
-COPY . /server
-WORKDIR /server
+FROM python:3
+WORKDIR /app
+COPY . .
 ENV PYTHONUNBUFFERED 1
 RUN pip3 install -r requirements.in
 EXPOSE 4201

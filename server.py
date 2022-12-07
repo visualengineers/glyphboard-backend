@@ -154,4 +154,6 @@ if __name__ == '__main__' or __name__ == 'server':
     security.init(ALLOWED_IPS)
     app.secret_key = 'IKso8d38JDJ!)jkdsdj'
     app.config['SESSION_TYPE'] = 'filesystem'    
+
+if __name__ == '__main__':
     app.run(port=config['port'])
