@@ -1,4 +1,4 @@
-from flask import Flask, request, flash, redirect, url_for, render_template
+from flask import Flask, request, flash, redirect, url_for, render_template, send_from_directory
 from sqlalchemy import create_engine
 from flask_jsonpify import jsonify
 from flask_cors import CORS
@@ -64,6 +64,11 @@ def exceptions(e):
     return "Internal Server Error", 500
 
 # APP ROUTES
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.root_path, 'favicon.ico', 
+        mimetype='image/vnd.microsoft.icon')
 
 @app.route('/datasets', methods=['GET'])
 def get_datasets():
