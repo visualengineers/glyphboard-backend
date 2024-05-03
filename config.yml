@@ -1,4 +1,4 @@
-base_dir: /
+base_dir: /glyphbackend/
 data_folder: data
 upload_folder: data
 port: 4201

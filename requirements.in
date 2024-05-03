@@ -9,6 +9,5 @@ scikit-learn
 scipy
 numpy
 statistics
-sklearn
 pathlib
 waitress
